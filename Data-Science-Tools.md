@@ -13,7 +13,9 @@ Nesse artigo irei descrever algumas ferramentas importantes e rotinaieras na vid
 * [SQLAlchemy](#sqlalchemy)
 * [Keras](#keras)
 * [OpenRefine](#openrefine)
-* [Curiosidades](#curiosidades)
+* [One Hot Encode](#onehotencode)
+* [Glob](#glob)
+* [Links Úteis](#linksuteis)
 
 ## Numpy
 
@@ -83,6 +85,41 @@ Algumas funcionalidades importantes:
 	file = pd.to_json('file.json')
 	file = pd.to_excel('file.xml')
 	file = pd.to_html('file.html')
+
+### Encontrar Valor na Tabela (Loc e Iloc)
+
+Loc e Iloc são métodos para encontrar valores em tabelas. Com o [.loc](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.loc.html) passa-se o nome da linha e depois o da coluna (.loc['linha', 'coluna']) equanto que o [.iloc](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iloc.html) passa-se o index da linha e da coluna (iloc[nlinha, ncoluna]), retornado nos dois casos o valor desejado. O tempo de processamento utilizando esses métodos é mais rápido que da maneira usual (tabela['coluna']['linha']).
+
+### Melt Data
+
+Consiste na junção de dados (colunas para linhas) de uma tabela para facilitar sua análise. Em pandas a função [.melt()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.melt.html) faz esse trabalho.
+
+### Pivoting Data
+
+Consiste na separação de dados (linhas para colunas) de uma tabela para facilitar sua análise. No pandas usa-se a função [.pivot_table()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.pivot_table.html).
+
+### Concatenar Tabelas (Concat Data))
+
+Muitas vezes, um mesmo tipo de dado pode vir em diferentes tabelas, em diferentes arquivos e podemos afzer ajunção deles em uma só tabela utilizando Pandas. Para isso, existe a função [pd.concat()](https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.concat.html). Passando uma lista de tabelas, ela faz a concatenação destas, deixando todos os dados intactos, até mesmo o 'id', podendo existir mais de um indice por linha, Para isso, existe o parâmetro ignore_index=True que rearranja os id's.
+
+### Fundir Tabelas (Merge Data)
+
+Existem casos em que tabelas não estão organizadas da mesma forma que outras, portanto, sua concatenação gerará problemas, juntando linhas erroneamente. Pandas dispõem uma função [pd.merge(left=tabela_esquerda, right=tabela_direita, left_on='nome_coluna', right_on='nome_coluna')](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html). Ela permite informar quais colunas devem ser analisadas para a fusão ocorrer perfeitamente.
+
+Existem 3 tipos diferentes de fusão de tabelas, todas usam a mesma função:
+
+* One-to-one: Os valores das colunas aparecem apenas uma vez em cada uma das tabelas.
+* Many-to-one / one-to-many: Os valores de uma das tabelas repete mais de uma vez, duplicando, na hora da fusão, os valores da tabela que tem valores únicos. 
+* Many-to-many: Os valores das tabelas que serão fundidas contém elementos com o mesmo nome.
+
+### Joining DataFrames
+
+São muitas as possibilidades para se juntar tabelas em Pandas, cada possibilidade com suas vantagens. Abaixo, demonstrarei os tipos existentes e seus usos.
+
+* [.append()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.append.html): Método mais simples, apenas juntando uma tabela com a outra verticalmente, não lidando com índices iguais e outros problemas, faz um 'outer join'.
+* [.concat([])](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.concat.html): Com ele é possível concatenar DataFrames tanto verticalmente quanto horizontalmente, com 'inner join' ou 'outer join'. É um método mais completo, podendo fazr mais modificações e melhorias na hora da agrgação.
+* [.join()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.join.html): Disponiliza agrupar utilizando 'inner', 'outer', 'left', 'right join'.
+* [.merge([])](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html): A função merge pertime vários 'joins' em múltiplas colunas.
 
 ## Matplotlib
 
@@ -228,8 +265,37 @@ Exemplo:
 	inverted = argmax(encoded[0])
 	print(inverted)
 
+## Glob
+
+O [Glob](https://docs.python.org/2/library/glob.html) é uma biblioteca built-in do python que encontra todos os arquivos de uma pasta dado um padrão de busca previamente exigido.
+
+	import glob
+
+	# Padrão exigido
+	pattern = '*.zip'
+	# Define em forma de lista todos os arquivos que seguem o padrão 
+	zip_files = glob.glob(pattern)
+	print(zip_files)
+
+## Airflow
+
+O [Airflow](https://airflow.apache.org/) é um framework criado pelo Airbnb para construir a parte [ETL](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7) (Extract, Transform, Load) do sistema. É uma ferramenta para manipulação da base da [piramide](https://cdn-images-1.medium.com/max/1600/1*7IMev5xslc9FLxr9hHhpFw.png) de Ciência dos Dados.
+
 ## Links Úteis
 
 * [What is one-hot encoding and when is it used in data science?](https://www.quora.com/What-is-one-hot-encoding-and-when-is-it-used-in-data-science)
 * [Data Preparation for Gradient Boosting with XGBoost in Python](https://machinelearningmastery.com/data-preparation-gradient-boosting-xgboost-python/)
 * [Multi-Class Classification Tutorial with the Keras Deep Learning Library](https://machinelearningmastery.com/multi-class-classification-tutorial-keras-deep-learning-library/)
+
+## Nomes Encontrados
+
+* *Data Engineering:* Como cientista de dados, os [engenheiros de dados](https://medium.freecodecamp.org/the-rise-of-the-data-engineer-91be18f1e603) escrevem código, são muito analíticos e interessados em visualização de dados. Não como cientistas de dados, mas como engenheiros de software, os engenheiros de dados controem ferramentas, infraestruturas, frameworks e serviços. Pode-se dizer que engenheiros de dados são mais parecidos com engenheiros de software do que com cientista de dados.
+* *Data Modeling:* Essa parte do desenvolvimento se baseia na ideia de modelar os dados, reorganizando tabelas e bases de dados, utilizando padrões de projetos e demais técnicas.
+* *Data Partitioning:* a ideia básica da partição de dados é simples - ao invés de armazenar todos os dados em um chunk, quebra-se em chunks independentes e self-contained. Data from the same chunk will be assigned with the same partition key, which means that any subset of the data can be looked up extremely quickly. This technique can greatly improve query performance.
+* Data Warehouse
+* Data Infrastructure
+* *Data Collection:* É a base da pirâmide de hierarqioa de ciência dos dados. Responsável por responder algumas perguntas, tais como: quais dados você precisa, e quais estãp disponíveis? Se existe um produto-usuário, você está explorando todas as interações relevantes qa o usuário esá fazendo? Se tem um sensor, quais dados estão sendo recebidos e como? O quão díficil é explorar uma interação que ainda não foi realizada? Após isso, como que os dados estão percorrendo ao longo do sistema? Você tem ETL? Onde você o armazena, e quão fácil é acessá-lo e analizá-lo.
+
+## Design Patterns
+
+* Star Schema: o [Star Schema](https://en.wikipedia.org/wiki/Star_schema) é um padrão de projetos utilizado na área de modelagem de dados, com foco em construir fact and dimension tables, especificamente tabelas dimensionais.
