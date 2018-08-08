@@ -280,7 +280,7 @@ O [Glob](https://docs.python.org/2/library/glob.html) é uma biblioteca built-in
 ## Airflow
 
 O [Airflow](https://airflow.apache.org/) é um framework criado pelo Airbnb para construir a parte [ETL](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7) (Extract, Transform, Load) do sistema. É uma ferramenta para manipulação da base da [piramide](https://cdn-images-1.medium.com/max/1600/1*7IMev5xslc9FLxr9hHhpFw.png) de Ciência dos Dados.
-
+su
 ## PyTorch
 
 ## Links Úteis
