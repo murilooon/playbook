@@ -50,6 +50,10 @@ or
 
 * git clone git@github.com:magrathealabs/minions.git
 
+### Change Your Git Default Editor to Sublime
+
+* git config --global core.editor "subl3 -n -w"
+
 ### Links
 
 * [Git Commands](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
