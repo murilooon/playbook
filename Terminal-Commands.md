@@ -60,6 +60,18 @@ Using -a option to the git commit command, you don't need to git add, it will au
 
 * git commit -a -m "text"
 
+### Rename Files
+
+* git mv file_from file_to
+
+### View Commit History
+
+* git log
+
+or
+
+* git log -p
+
 ### Links
 
 * [Git Commands](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
