@@ -1,6 +1,6 @@
 # Python Data Science Tools
 
-Nesse artigo irei descrever algumas ferramentas importantes e rotinaieras na vida de um cientista de dados. Será abordado a funcionalidade e aplicações práticas de cada uma delas. Além disso, trechos de sintaxe das ferramentas será descrito para recorrer ao artigo quando necessária a consulta.
+Nesse artigo descreverei algumas ferramentas importantes e rotinaieras na vida de um cientista de dados. Será abordado a funcionalidade e aplicações práticas de cada uma delas. Além disso, trechos de sintaxe das ferramentas será descrito para recorrer ao artigo quando necessária a consulta.
 
 ## Sumário
 

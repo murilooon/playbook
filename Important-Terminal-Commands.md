@@ -54,6 +54,12 @@ or
 
 * git config --global core.editor "subl3 -n -w"
 
+### Skipping the Staging Area
+
+Using -a option to the git commit command, you don't need to git add, it will automatically add all files that are tracked.
+
+* git commit -a -m "text"
+
 ### Links
 
 * [Git Commands](https://gist.github.com/leocomelli/2545add34e4fec21ec16)
