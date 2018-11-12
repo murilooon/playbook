@@ -1,5 +1,12 @@
 # GitHub - Como Contribuir Para Um Projeto
 
+A árvore completa para contribuir em um projeto é:
+
+* Clonar o repositório na sua máquina local
+* Criar uma branch e começar a modificar e desenvolver melhorias dentro dela
+* Adicionar os arquivos modificados, _commitar_ e enviá-los para o GitHub
+* Abrir um Pull Request no GitHub para que seja feita um revisão antes de incluir as modificações no repositório principal.
+
 ### Clonar o repositório remoto
 
 ```sh
@@ -14,7 +21,7 @@ git checkout nome-branch
 ```
 Obs: Colocar um nome que faz sentido na branch
 
-Obs2: Toda modificação feita aqui não complicará o código principal
+Obs²: Toda modificação feita aqui não complicará o código principal
 
 ### Adicionar os arquivos, commitar e mandar para o repositório remoto na branch indicada
 
