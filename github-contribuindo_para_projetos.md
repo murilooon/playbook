@@ -1,6 +1,6 @@
 # GitHub - Como Contribuir Para Um Projeto
 
-### Clonar o reposit�rio remoto
+### Clonar o reposit�rio remoto
 
 ```sh
 git clone git@github.com:murilooon/UDESC.git
@@ -14,9 +14,9 @@ git checkout nome-branch
 ```
 Obs: Colocar um nome que faz sentido na branch
 
-Obs2: Toda modifica��o feita aqui n�o complicar� o c�digo principal
+Obs2: Toda modifica��o feita aqui n�o complicar� o c�digo principal
 
-### Adicionar os arquivos, commitar e mandar para o reposit�rio remoto na branch indicada
+### Adicionar os arquivos, commitar e mandar para o reposit�rio remoto na branch indicada
 
 ```sh
 git add nome-arquivo
@@ -24,7 +24,7 @@ git commit -m "alguma-coisa"
 git push origin nome-branch
 ```
 
-### Voltar para a master e atualizar com o reposit�rio remoto
+### Voltar para a master e atualizar com o reposit�rio remoto
 
 ```sh
 git checkout master
@@ -39,4 +39,14 @@ Obs: sempre voltar pra master e atualizar antes de criar uma nova branch
 git branch -D nome-branch
 ```
 
-Obs: depois de criar um PR e ele for juntado ao c�digo principal, excluir a branch
+Obs: depois de criar um PR e ele for juntado ao c�digo principal, excluir a branch
+
+## Abrindo Pull Request (PR)
+
+Um PR nada mais é do que um pedido para inserir uma modificação no repositório principal, incluindo apenas as linhas dos arquivos alterados, não todo o projeto.
+
+Quando você cria uma branch, adiciona os arquivos modificados, faz um commit, você tem todas as alterações apenas salvasna sua maquina local. Porém, ao fazer um push você envia para o projeto remoto tudo o que foi _commitado_ (para o GitHub).
+
+Agora ao abrir o link do projeto no GitHub va aparecer a branch nova que você criou e um pedido para abrir um pull request. Você será redirecionado para um nova tela. Nela poderá colocar um título para o PR, de preferência uma frase curta, um texto explicando rapidamente o que foi modificado e no canto direito pedir para pessoas revisarem seu PR.
+
+Depois de as pessoas revisarem e aprovarem o PR, você pode dar _merge_ do código para a master, isso quer dizer, enviar suas modificações para o códigp principal.
