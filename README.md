@@ -10,7 +10,7 @@
 
 * Organizador do Startup Weekend Joinville (2018/2)
 * Voluntário administrativo do Fab Lab Joinville (2018/2)
-* Voluntário da XX Semana da Computação (17/09/2018 até 21/09/2018)
+* Voluntário da XX Semana da Computação na UDESC Joinville (17/09/2018 até 21/09/2018)
 * Organizador do evento Bee Free - Hardware e Software Livre (2017) 
 * Voluntário do Colméia - Software e Hardware Livre (25/05/2017 até 31/07/2017)
 
