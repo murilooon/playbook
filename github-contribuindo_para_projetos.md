@@ -1,6 +1,6 @@
 # GitHub - Como Contribuir Para Um Projeto
 
-### Clonar o reposit�rio remoto
+### Clonar o repositório remoto
 
 ```sh
 git clone git@github.com:murilooon/UDESC.git
@@ -14,9 +14,9 @@ git checkout nome-branch
 ```
 Obs: Colocar um nome que faz sentido na branch
 
-Obs2: Toda modifica��o feita aqui n�o complicar� o c�digo principal
+Obs2: Toda modificação feita aqui não complicará o código principal
 
-### Adicionar os arquivos, commitar e mandar para o reposit�rio remoto na branch indicada
+### Adicionar os arquivos, commitar e mandar para o repositório remoto na branch indicada
 
 ```sh
 git add nome-arquivo
@@ -24,7 +24,7 @@ git commit -m "alguma-coisa"
 git push origin nome-branch
 ```
 
-### Voltar para a master e atualizar com o reposit�rio remoto
+### Voltar para a master e atualizar com o repositório remoto
 
 ```sh
 git checkout master
@@ -39,7 +39,7 @@ Obs: sempre voltar pra master e atualizar antes de criar uma nova branch
 git branch -D nome-branch
 ```
 
-Obs: depois de criar um PR e ele for juntado ao c�digo principal, excluir a branch
+Obs: depois de criar um PR e ele for juntado ao código principal, excluir a branch
 
 ## Abrindo Pull Request (PR)
 
