@@ -1,4 +1,4 @@
-## Palestra/Minicursos
+## Palestras/Minicursos
 
 * Minicurso sobre Web Scraping em Python na XX Semana da Computação (20/09/2018)
 * Palestra sobre Data Science na UDESC (14/05/2018)
