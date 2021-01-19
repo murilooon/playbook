@@ -55,9 +55,7 @@ sudo apt install brave-browser
 ```
 
 ## Install Slack
-```
-sudo snap install slack --classic
-```
+`sudo snap install slack --classic`
 
 ## Install VSCode
 `sudo snap install code --classic`
