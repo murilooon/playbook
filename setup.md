@@ -58,3 +58,12 @@ sudo apt install brave-browser
 ```
 sudo snap install slack --classic
 ```
+
+## Install VSCode
+`sudo snap install code --classic`
+
+## Install NVM
+`curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash `
+
+## Install Yarn
+`npm install --global yarn`
