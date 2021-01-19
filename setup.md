@@ -1,12 +1,12 @@
 # Setup Machine
 
-## Install regolith
+## Install Regolith
 ```
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop-mobile
 ```
 
-## Install terminator
+## Install Terminator
 `sudo apt install terminator`
 
 ## Install Zsh
@@ -62,7 +62,7 @@ sudo snap install slack --classic
 ## Install VSCode
 `sudo snap install code --classic`
 
-## Install NVM
+## Install Nvm
 `curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash `
 
 ## Install Yarn
