@@ -1,3 +1,5 @@
+# Setup Machine
+
 ## Install regolith
 ```
 sudo add-apt-repository ppa:regolith-linux/release
@@ -33,3 +35,8 @@ xclip -selection clipboard < ~/.ssh/id_ed25519.pub
 git config --global user.name "murilooon"
 git config --global user.email murilooon@gmail.com
 ```
+
+# Additional but important apps
+
+## Install Postman
+`sudo snap install postman`
