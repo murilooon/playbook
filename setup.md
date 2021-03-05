@@ -87,4 +87,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 `npm install --global yarn`
 
 ## Install asdf
-`https://asdf-vm.com/#/core-manage-asdf`
+```
+https://asdf-vm.com/#/core-manage-asdf
+
+-- Node
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf global nodejs 15.11.0
+```
+
