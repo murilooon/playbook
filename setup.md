@@ -82,3 +82,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 ## Install Yarn
 `npm install --global yarn`
+
+## Install asdf
+`https://asdf-vm.com/#/core-manage-asdf`
