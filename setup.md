@@ -39,7 +39,10 @@ git config --global user.email murilooon@gmail.com
 # Additional but important apps
 
 ## Install Postman
-`sudo snap install postman`
+```
+sudo apt install snapd
+sudo snap install postman
+```
 
 ## Install Brave
 ```
@@ -55,12 +58,16 @@ sudo apt install brave-browser
 ```
 
 ## Install Slack
-`sudo apt install snapd`
-`sudo snap install slack --classic`
+```
+sudo apt install snapd
+sudo snap install slack --classic
+```
 
 ## Install VSCode
-`sudo apt install snapd`
-`sudo snap install code --classic`
+```
+sudo apt install snapd
+sudo snap install code --classic
+```
 
 ## Install Nvm
 ```
