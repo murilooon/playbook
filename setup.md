@@ -10,7 +10,10 @@ sudo apt install regolith-desktop-mobile
 `sudo apt install terminator`
 
 ## Install Zsh
-`sudo apt install zsh`
+```
+sudo apt install zsh
+chsh -s /bin/zsh
+```
 
 ## Install Powerline Fonts
 `sudo apt-get install fonts-powerline`
