@@ -15,18 +15,23 @@ sudo apt install zsh
 chsh -s /bin/zsh
 ```
 
-# Install oh-my-zsh
-`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-
-## Install Powerline Fonts
-`sudo apt-get install fonts-powerline`
-
-## Install Spaceship Prompt
+## Install Brave
 ```
-git clone https://g​
-29
-npm install -g spaceship-promptithub.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme" 
+sudo apt install apt-transport-https curl gnupg
+
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo apt install brave-browser
+```
+
+## Install VSCode
+```
+sudo apt install snapd
+sudo snap install code --classic
 ```
 
 ## Install and config git/github
@@ -47,6 +52,21 @@ git config --global user.name "murilooon"
 git config --global user.email murilooon@gmail.com
 ```
 
+# Install oh-my-zsh
+`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+## Install Powerline Fonts
+`sudo apt-get install fonts-powerline`
+
+## Install Spaceship Prompt
+```
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+Set ZSH_THEME="spaceship" in your ~/.zshrc
+```
+
 # Additional but important apps
 
 ## Install Postman
@@ -55,29 +75,10 @@ sudo apt install snapd
 sudo snap install postman
 ```
 
-## Install Brave
-```
-sudo apt install apt-transport-https curl gnupg
-
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
-sudo apt update
-
-sudo apt install brave-browser
-```
-
 ## Install Slack
 ```
 sudo apt install snapd
 sudo snap install slack --classic
-```
-
-## Install VSCode
-```
-sudo apt install snapd
-sudo snap install code --classic
 ```
 
 ## Install Nvm
