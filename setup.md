@@ -81,20 +81,6 @@ sudo apt install snapd
 sudo snap install slack --classic
 ```
 
-## Install Nvm
-```
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-
-code ~/.zshrc
-
-## print in the end of ./zshrc file
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-```
-
-## Install Yarn
-`npm install --global yarn`
-
 ## Install asdf
 Link: https://asdf-vm.com/#/core-manage-asdf
 ```
@@ -118,6 +104,9 @@ asdf global nodejs 14.13.1
 asdf install ruby xx.xx.xx
 asdf global ruby xx.xx.xx
 ```
+
+## Install Yarn
+`npm install --global yarn`
 
 ## ~/.zshrc
 ```
